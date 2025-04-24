@@ -56,11 +56,8 @@ Before you begin, ensure you have the following:
 3. Run SQL queries to analyze and transform the data.
 4. Save the query results to a new S3 folder.
 
-### 5. Load Data into Amazon RDS
-1. Create an RDS instance (MySQL/PostgreSQL recommended).
-2. Use an ETL process (e.g., AWS Glue job or Python script) to load data from S3/Athena results into RDS.
 
-### 6. Visualize Data in Power BI
+### 5. Visualize Data in Power BI
 1. Connect Power BI to your RDS instance:
    - Use the "PostgreSQL" or "MySQL" connector.
    - Enter your RDS endpoint, username, and password.
