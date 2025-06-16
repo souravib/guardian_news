@@ -3,7 +3,7 @@
 This repository contains code and instructions for setting up a data pipeline that:
 1. Pulls data from the Guardian News API using an AWS Lambda function.
 2. Processes and stores the data in Amazon S3 and catalogs it using AWS Glue for querying in Amazon Athena.
-3. Loads the processed data into Amazon RDS for visualization in Power BI.
+3. Connect with Athena for visualization in Power BI.
 
 ## Architecture Overview
 
