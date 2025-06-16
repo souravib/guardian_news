@@ -11,8 +11,7 @@ This repository contains code and instructions for setting up a data pipeline th
 2. **AWS Lambda**: Serverless function to fetch and process data from the Guardian API.
 3. **Amazon S3**: Storage for raw and processed data.
 4. **AWS Glue**: Catalogs data stored in S3 for querying with Amazon Athena.
-5. **Amazon Athena**: Used to query and analyze data directly from S3.
-6. **Amazon RDS**: Relational database to store aggregated data for Power BI visualization.
+5. **Amazon Athena**: Used to query and analyze data directly from S3 and to store aggregated data for Power BI visualization.
 
 ## Prerequisites
 
@@ -33,14 +32,9 @@ Before you begin, ensure you have the following:
 
 #### Steps:
 1. Navigate to the AWS Lambda console.
-2. Create a new Lambda function.
-3. Use the provided Python script (`lambda_function.py`) to fetch and process data from the Guardian News API.
-4. Add the necessary environment variables:
-   - `GUARDIAN_API_KEY`: Your Guardian API key.
-   - `S3_BUCKET_NAME`: The name of your S3 bucket.
-   - `S3_RAW_FOLDER`: Folder path for raw data.
-   - `S3_PROCESSED_FOLDER`: Folder path for processed data.
-5. Attach necessary permissions to the Lambda execution role:
+2. Create a Lambda function to fetch and process data from the Guardian News API.
+3. Add the necessary environment variables.
+4. Attach necessary permissions to the Lambda execution role:
    - S3 write access.
    - Glue and Athena access if required.
 
@@ -58,9 +52,7 @@ Before you begin, ensure you have the following:
 
 
 ### 5. Visualize Data in Power BI
-1. Connect Power BI to your RDS instance:
-   - Use the "PostgreSQL" or "MySQL" connector.
-   - Enter your RDS endpoint, username, and password.
+1. Connect Power BI to Athena.
 2. Import tables and create dashboards.
 
 
